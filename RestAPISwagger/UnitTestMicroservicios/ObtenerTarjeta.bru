@@ -1,0 +1,21 @@
+meta {
+  name: ObtenerTarjeta
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://localhost:44344/action/ObtenerTarjeta/2931d66b-3796-44ce-3379-08d9b4d8b262
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: f50da451-e954-4ece-61f1-08d9b524f0fa
+  placement: header
+}
+
+settings {
+  encodeUrl: true
+}

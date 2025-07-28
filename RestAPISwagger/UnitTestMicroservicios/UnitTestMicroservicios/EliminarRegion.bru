@@ -1,0 +1,70 @@
+meta {
+  name: EliminarRegion
+  type: http
+  seq: 9
+}
+
+delete {
+  url: https://localhost:44344/action/EliminarRegion
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Regiones": [
+      {
+        "region": "Edit Región de Arica y Parinacota"
+      },
+      {
+        "region": "Región de Tarapacá"
+      },
+      {
+        "region": "Región de Antofagasta"
+      },
+      {
+        "region": "Región de Atacama"
+      },
+      {
+        "region": "Región de Coquimbo"
+      },
+      {
+        "region": "Región de Valparaíso"
+      },
+      {
+        "region": "Región Metropolitana"
+      },
+      {
+        "region": "Región del Libertador General Bernardo O’Higgins"
+      },
+      {
+        "region": "Región del Maule"
+      },
+      {
+        "region": "Región de Ñuble"
+      },
+      {
+        "region": "Región del Biobío"
+      },
+      {
+        "region": "Región de La Araucanía"
+      },
+      {
+        "region": "Región de Los Ríos"
+      },
+      {
+        "region": "Región de Los Lagos"
+      },
+      {
+        "region": "Región de Aysén"
+      },
+      {
+        "region": "Región de Magallanes y de la Antártica Chilena: Punta Arenas"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

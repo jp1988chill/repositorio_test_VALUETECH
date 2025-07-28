@@ -1,0 +1,44 @@
+meta {
+  name: DescontarSaldoTarjeta
+  type: http
+  seq: 3
+}
+
+put {
+  url: https://localhost:44344/action/DescontarSaldoTarjeta/1200
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 6E79AE43-DC31-4A61-0FA7-08D9959527FB
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "8A98854B-19A3-47F0-D3E2-08D995953104",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8088",
+        "Estado": "vigente",
+        "Amount": 1355
+      },
+      {
+        "Id": "E5E340AD-BDA9-40FE-D3E0-08D995953104",
+        "Name": "Cliente Hilbert",
+        "Pan": "1232-124-15234-11234",
+        "Pin": "81528",
+        "Estado": "no vigente",
+        "Amount": 778987
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

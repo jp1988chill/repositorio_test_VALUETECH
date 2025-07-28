@@ -1,0 +1,36 @@
+meta {
+  name: CrearTarjeta
+  type: http
+  seq: 1
+}
+
+put {
+  url: https://localhost:44344/action/CrearTarjeta
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: c8c48e52-a537-405c-302e-08d9b90fdf6c
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8088",
+        "Estado": "no vigente",
+        "Amount": 1355
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

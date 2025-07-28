@@ -1,0 +1,414 @@
+{
+  "name": "UnitTestMicroservicios",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "ActualizarComuna",
+      "filename": "ActualizarComuna.bru",
+      "seq": 2,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ActualizarComuna",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"Comunas\": [\n    {\n      \"Idcomuna\": 1,\n      \"Idregion\": 133,\n      \"comuna\": \"Puyehue edit\",\n      \"informacionadicional\": \"\n        edit <Info>\n        <Superficie>4799.4</Superficie>\n        <Poblacion Densidad='51.6'>247552</Poblacion></Info>\"\n    },\n    \n    {\n      \"Idcomuna\": 2,\n      \"Idregion\": 132,\n      \"comuna\": \"Rancagua edit\",\n      \"informacionadicional\": \"\n        edit 2 <Info>\n        <Superficie>1111.4</Superficie>\n        <Poblacion Densidad='11.6'>247552</Poblacion></Info>\"\n    },\n    \n    \n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "2831c355-4ff5-4631-1a51-08d9b535b1cb",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "ActualizarNombreRegion",
+      "filename": "ActualizarNombreRegion.bru",
+      "seq": 1,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ActualizarNombreRegion/Región de Arica y Parinacota/Edit Región de Arica y Parinacota",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\r\n  \r\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "44841339-2F11-49BE-1B75-08D995B6EE62",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "CrearComuna",
+      "filename": "CrearComuna.bru",
+      "seq": 4,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/CrearComuna",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"Comunas\": [\n    {\n      \"Idregion\": 1,\n      \"comuna\": \"Puyehue\",\n      \"informacionadicional\": \"\n        <Info>\n        <Superficie>4799.4</Superficie>\n        <Poblacion Densidad='51.6'>247552</Poblacion></Info>\"\n    },\n    \n    {\n      \"Idregion\": 1,\n      \"comuna\": \"Rancagua\",\n      \"informacionadicional\": \"\n        <Info>\n        <Superficie>1111.4</Superficie>\n        <Poblacion Densidad='11.6'>247552</Poblacion></Info>\"\n    },\n    \n    \n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "c8c48e52-a537-405c-302e-08d9b90fdf6c",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "CrearRegion",
+      "filename": "CrearRegion.bru",
+      "seq": 6,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/CrearRegion",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\r\n  \"Regiones\": [\r\n    {\r\n      \"region\": \"Región de Arica y Parinacota\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Tarapacá\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Antofagasta\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Atacama\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Coquimbo\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Valparaíso\"\r\n    },\r\n    {\r\n      \"region\": \"Región Metropolitana\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Libertador General Bernardo O’Higgins\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Maule\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Ñuble\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Biobío\"\r\n    },\r\n    {\r\n      \"region\": \"Región de La Araucanía\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Los Ríos\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Los Lagos\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Aysén\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Magallanes y de la Antártica Chilena: Punta Arenas\"\r\n    }\r\n  ]\r\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "EliminarComuna",
+      "filename": "EliminarComuna.bru",
+      "seq": 8,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/EliminarComuna",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"Comunas\": [\n    {\n      \"Idcomuna\": 1,\n      \"Idregion\": 133,\n      \"comuna\": \"Puyehue edit\",\n      \"informacionadicional\": \"\n        edit <Info>\n        <Superficie>4799.4</Superficie>\n        <Poblacion Densidad='51.6'>247552</Poblacion></Info>\"\n    },\n    \n    {\n      \"Idcomuna\": 2,\n      \"Idregion\": 132,\n      \"comuna\": \"Rancagua edit\",\n      \"informacionadicional\": \"\n        edit 2 <Info>\n        <Superficie>1111.4</Superficie>\n        <Poblacion Densidad='11.6'>247552</Poblacion></Info>\"\n    },\n    \n    \n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "6d5e7dfe-bc1b-46e4-734c-08d9b53eec86",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "EliminarRegion",
+      "filename": "EliminarRegion.bru",
+      "seq": 9,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/EliminarRegion",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\r\n  \"Regiones\": [\r\n    {\r\n      \"region\": \"Edit Región de Arica y Parinacota\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Tarapacá\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Antofagasta\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Atacama\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Coquimbo\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Valparaíso\"\r\n    },\r\n    {\r\n      \"region\": \"Región Metropolitana\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Libertador General Bernardo O’Higgins\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Maule\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Ñuble\"\r\n    },\r\n    {\r\n      \"region\": \"Región del Biobío\"\r\n    },\r\n    {\r\n      \"region\": \"Región de La Araucanía\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Los Ríos\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Los Lagos\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Aysén\"\r\n    },\r\n    {\r\n      \"region\": \"Región de Magallanes y de la Antártica Chilena: Punta Arenas\"\r\n    }\r\n  ]\r\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "ObtenerComuna",
+      "filename": "ObtenerComuna.bru",
+      "seq": 10,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ObtenerComuna/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "f50da451-e954-4ece-61f1-08d9b524f0fa",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "ObtenerComunas",
+      "filename": "ObtenerComunas.bru",
+      "seq": 12,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ObtenerComunas",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "70A46753-3E44-4721-4F8B-08D9B4D84F44",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "ObtenerComunasPorNombreRegion",
+      "filename": "ObtenerComunasPorNombreRegion.bru",
+      "seq": 11,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ObtenerComunasPorNombreRegion/Región de Arica y Parinacota",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\r\n  \"Cards\": [\r\n    {\r\n      \"Id\": \"A45B8C08-E8A1-4831-852C-CC6BA18379B5\",\r\n      \"Name\": \"User Juan Pablo Neira\",\r\n      \"Pan\": \"1234-1234-1234-1234\",\r\n      \"Pin\": \"8088\",\r\n      \"Estado\": \"vigente\",\r\n      \"Amount\": 1355\r\n    },\r\n    {\r\n      \"Id\": \"8BA6059C-5584-4CFB-81D8-08D995016207\",\r\n      \"Name\": \"User Juan Pablo Neira\",\r\n      \"Pan\": \"1232-124-15234-11234\",\r\n      \"Pin\": \"81528\",\r\n      \"Estado\": \"no vigente\",\r\n      \"Amount\": 778987\r\n    }\r\n  ]\r\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "AE3FAE9F-FA16-4C2E-6AA5-08D995ADA13F",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "ObtenerRegiones",
+      "filename": "ObtenerRegiones.bru",
+      "seq": 13,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/ObtenerRegiones",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "577168ec-01dc-434a-eb59-08d9b54bf863",
+            "placement": "header"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "VaciarSaldoTarjeta",
+      "filename": "VaciarSaldoTarjeta.bru",
+      "seq": 14,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://localhost:44344/action/VaciarSaldoTarjeta",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\r\n  \"Cards\": [\r\n    {\r\n      \"Id\": \"A45B8C08-E8A1-4831-852C-CC6BA18379B5\",\r\n      \"Name\": \"User Juan Pablo Neira\",\r\n      \"Pan\": \"1234-1234-1234-1234\",\r\n      \"Pin\": \"8088\",\r\n      \"Estado\": \"vigente\",\r\n      \"Amount\": 1355\r\n    },\r\n    {\r\n      \"Id\": \"148FAF14-7B16-4827-81DB-08D995016206\",\r\n      \"Name\": \"Cliente Hilbert\",\r\n      \"Pan\": \"1232-124-15234-11234\",\r\n      \"Pin\": \"81528\",\r\n      \"Estado\": \"no vigente\",\r\n      \"Amount\": 778987\r\n    }\r\n  ]\r\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "apikey",
+          "apikey": {
+            "key": "Token",
+            "value": "ADC7AA2B-DE29-4E6C-10B4-08D995900FDC",
+            "placement": "header"
+          }
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "root": {
+    "request": {
+      "auth": {
+        "mode": "none"
+      }
+    },
+    "meta": {
+      "name": "UnitTestMicroservicios"
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "UnitTestMicroservicios",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.00775909423828125,
+    "filesCount": 12
+  }
+}

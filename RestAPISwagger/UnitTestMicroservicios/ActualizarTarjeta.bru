@@ -1,0 +1,44 @@
+meta {
+  name: ActualizarTarjeta
+  type: http
+  seq: 5
+}
+
+put {
+  url: https://localhost:44344/action/ActualizarTarjeta
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 2831c355-4ff5-4631-1a51-08d9b535b1cb
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "2931D66B-3796-44CE-3379-08D9B4D8B262",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8888",
+        "Estado": "vigente",
+        "Amount": 355
+      },
+      {
+        "Id": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1232-124-15234-11234",
+        "Pin": "81528",
+        "Estado": "no vigente",
+        "Amount": 778987
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

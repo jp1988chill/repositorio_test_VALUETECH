@@ -1,0 +1,44 @@
+meta {
+  name: EliminarTarjeta
+  type: http
+  seq: 6
+}
+
+delete {
+  url: https://localhost:44344/action/EliminarTarjeta
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 6d5e7dfe-bc1b-46e4-734c-08d9b53eec86
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "2931D66B-3796-44CE-3379-08D9B4D8B262",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8888",
+        "Estado": "vigente",
+        "Amount": 355
+      },
+      {
+        "Id": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1232-124-15234-11234",
+        "Pin": "81528",
+        "Estado": "no vigente",
+        "Amount": 778987
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

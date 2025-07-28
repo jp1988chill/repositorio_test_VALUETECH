@@ -1,0 +1,32 @@
+meta {
+  name: CrearUsuario
+  type: http
+  seq: 13
+}
+
+put {
+  url: https://localhost:44344/action/CrearUsuario
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Users": [
+      {
+        "Token": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Password": "LocalTest1"
+      },
+      {
+        "Token": "8BA6059C-5584-4CFB-81D8-08D995016208",
+        "Name": "User Hilbert",
+        "Password": "1234ac"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

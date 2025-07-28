@@ -1,0 +1,44 @@
+meta {
+  name: ObtenerTarjetaPorNombreUsuario
+  type: http
+  seq: 10
+}
+
+post {
+  url: https://localhost:44344/action/ObtenerTarjetaPorNombreUsuario/User Juan Pablo Neira
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: AE3FAE9F-FA16-4C2E-6AA5-08D995ADA13F
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "A45B8C08-E8A1-4831-852C-CC6BA18379B5",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8088",
+        "Estado": "vigente",
+        "Amount": 1355
+      },
+      {
+        "Id": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1232-124-15234-11234",
+        "Pin": "81528",
+        "Estado": "no vigente",
+        "Amount": 778987
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

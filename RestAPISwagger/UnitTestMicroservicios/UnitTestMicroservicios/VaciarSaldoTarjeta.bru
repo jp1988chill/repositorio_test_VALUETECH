@@ -1,0 +1,44 @@
+meta {
+  name: VaciarSaldoTarjeta
+  type: http
+  seq: 14
+}
+
+put {
+  url: https://localhost:44344/action/VaciarSaldoTarjeta
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: ADC7AA2B-DE29-4E6C-10B4-08D995900FDC
+  placement: header
+}
+
+body:json {
+  {
+    "Cards": [
+      {
+        "Id": "A45B8C08-E8A1-4831-852C-CC6BA18379B5",
+        "Name": "User Juan Pablo Neira",
+        "Pan": "1234-1234-1234-1234",
+        "Pin": "8088",
+        "Estado": "vigente",
+        "Amount": 1355
+      },
+      {
+        "Id": "148FAF14-7B16-4827-81DB-08D995016206",
+        "Name": "Cliente Hilbert",
+        "Pan": "1232-124-15234-11234",
+        "Pin": "81528",
+        "Estado": "no vigente",
+        "Amount": 778987
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

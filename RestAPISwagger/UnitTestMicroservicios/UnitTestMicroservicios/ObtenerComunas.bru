@@ -1,0 +1,27 @@
+meta {
+  name: ObtenerComunas
+  type: http
+  seq: 12
+}
+
+post {
+  url: https://localhost:44344/action/ObtenerComunas
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 70A46753-3E44-4721-4F8B-08D9B4D84F44
+  placement: header
+}
+
+body:json {
+  {
+   
+  }
+}
+
+settings {
+  encodeUrl: true
+}

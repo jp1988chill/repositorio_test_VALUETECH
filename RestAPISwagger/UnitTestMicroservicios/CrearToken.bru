@@ -1,0 +1,32 @@
+meta {
+  name: CrearToken
+  type: http
+  seq: 12
+}
+
+put {
+  url: https://localhost:44344/action/CrearToken
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Users": [
+      {
+        "Token": "4770D437-81D5-45DD-8507-08D9959B4370",
+        "Name": "User Juan Pablo Neira",
+        "Password": "LocalTest1"
+      },
+      {
+        "Token": "FB20A841-DA48-4ED1-51CF-08D99533F5EF",
+        "Name": "User Hilbert",
+        "Password": "1234ac"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

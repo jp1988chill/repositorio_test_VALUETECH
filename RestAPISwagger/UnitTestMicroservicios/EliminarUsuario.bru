@@ -1,0 +1,37 @@
+meta {
+  name: EliminarUsuario
+  type: http
+  seq: 14
+}
+
+delete {
+  url: https://localhost:44344/action/EliminarUsuario
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "Users": [
+      {
+        "Token": "8BA6059C-5584-4CFB-81D8-08D995016207",
+        "Name": "User Juan Pablo Neira",
+        "Password": "LocalTest1"
+      },
+      {
+        "Token": "8BA6059C-5584-4CFB-81D8-08D995016208",
+        "Name": "User Hilbert",
+        "Password": "1234ac"
+      },
+      {
+        "Token": "8BA6059C-5584-4CFB-81D8-08D995016208",
+        "Name": "Juan Neira",
+        "Password": "1234ac"
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

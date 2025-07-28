@@ -1,0 +1,49 @@
+meta {
+  name: ActualizarComuna
+  type: http
+  seq: 2
+}
+
+put {
+  url: https://localhost:44344/action/ActualizarComuna
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 2831c355-4ff5-4631-1a51-08d9b535b1cb
+  placement: header
+}
+
+body:json {
+  {
+    "Comunas": [
+      {
+        "Idcomuna": 1,
+        "Idregion": 133,
+        "comuna": "Puyehue edit",
+        "informacionadicional": "
+          edit <Info>
+          <Superficie>4799.4</Superficie>
+          <Poblacion Densidad='51.6'>247552</Poblacion></Info>"
+      },
+      
+      {
+        "Idcomuna": 2,
+        "Idregion": 132,
+        "comuna": "Rancagua edit",
+        "informacionadicional": "
+          edit 2 <Info>
+          <Superficie>1111.4</Superficie>
+          <Poblacion Densidad='11.6'>247552</Poblacion></Info>"
+      },
+      
+      
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

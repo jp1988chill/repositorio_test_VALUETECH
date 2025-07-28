@@ -1,0 +1,27 @@
+meta {
+  name: ActualizarNombreRegion
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://localhost:44344/action/ActualizarNombreRegion/Región de Arica y Parinacota/Edit Región de Arica y Parinacota
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 44841339-2F11-49BE-1B75-08D995B6EE62
+  placement: header
+}
+
+body:json {
+  {
+    
+  }
+}
+
+settings {
+  encodeUrl: true
+}

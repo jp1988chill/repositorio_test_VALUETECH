@@ -1,0 +1,47 @@
+meta {
+  name: CrearComuna
+  type: http
+  seq: 4
+}
+
+put {
+  url: https://localhost:44344/action/CrearComuna
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: c8c48e52-a537-405c-302e-08d9b90fdf6c
+  placement: header
+}
+
+body:json {
+  {
+    "Comunas": [
+      {
+        "Idregion": 1,
+        "comuna": "Puyehue",
+        "informacionadicional": "
+          <Info>
+          <Superficie>4799.4</Superficie>
+          <Poblacion Densidad='51.6'>247552</Poblacion></Info>"
+      },
+      
+      {
+        "Idregion": 1,
+        "comuna": "Rancagua",
+        "informacionadicional": "
+          <Info>
+          <Superficie>1111.4</Superficie>
+          <Poblacion Densidad='11.6'>247552</Poblacion></Info>"
+      },
+      
+      
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

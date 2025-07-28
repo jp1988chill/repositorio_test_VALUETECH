@@ -1,0 +1,21 @@
+meta {
+  name: ObtenerUsuarios
+  type: http
+  seq: 9
+}
+
+get {
+  url: https://localhost:44344/action/ObtenerUsuarios
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Token
+  value: 577168ec-01dc-434a-eb59-08d9b54bf863
+  placement: header
+}
+
+settings {
+  encodeUrl: true
+}
